@@ -25,8 +25,9 @@ img {
 }
 
 :root {
-  --base-background-clr: #fcf9ee;
-  --main-dark-clr: #252422;
+  --base-background-clr: hsl(47, 70%, 96%);
+  --main-dark-clr: hsl(40, 4%, 14%);
+  --white-clr: hsl(0, 0%, 100%);
 }
 
 body {
