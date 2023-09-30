@@ -6,6 +6,7 @@ const Footer = () => {
     <footer className={styles.footer}>
       <BasicDebtLogo height='16' width='50' color='#fff' viewBox='0 0 307 100' />
 
+      <p>We collaborate with ambitious brands and people. Let's build.</p>
     </footer>
   );
 };
