@@ -25,5 +25,10 @@ img {
 }
 
 :root {
-  --background: #fcf9ee;
+  --base-background-clr: #fcf9ee;
+  --main-dark-clr: #252422;
+}
+
+body {
+  background-color: var(--base-background-clr);
 }
