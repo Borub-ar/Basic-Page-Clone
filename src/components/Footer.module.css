@@ -2,3 +2,66 @@
   background-color: var(--main-dark-clr);
   padding: 4rem 2rem;
 }
+
+.information,
+.information a {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--white-clr);
+  margin-block: 3rem 6rem;
+  max-width: 50ch;
+  word-break: break-word;
+}
+
+h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--white-clr);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.28px;
+  margin-bottom: 1.8rem;
+}
+
+h3::before {
+  content: '';
+  display: inline-block;
+  height: 10px;
+  aspect-ratio: 1;
+  background-color: var(--white-clr);
+  border-radius: 50%;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.inputWrapper label {
+  position: absolute;
+  left: -10000px;
+  visibility: hidden;
+}
+
+.inputWrapper input,
+.inputWrapper input::placeholder {
+  font-size: 0.8rem;
+  color: var(--white-clr);
+}
+
+.inputWrapper input {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  border-bottom: 2px solid var(--white-clr);
+  padding-bottom: 1.1rem;
+}
+
+.inputWrapper p {
+  color: var(--white-clr);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 1rem;
+  font-size: 0.65rem;
+}
