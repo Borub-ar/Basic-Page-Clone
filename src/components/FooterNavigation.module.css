@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--white-clr);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.28px;
+  margin-bottom: 1.8rem;
+}
+
+.header::before {
+  content: '';
+  display: inline-block;
+  height: 10px;
+  aspect-ratio: 1;
+  background-color: var(--white-clr);
+  border-radius: 50%;
+}

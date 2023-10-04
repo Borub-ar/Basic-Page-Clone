@@ -1,6 +1,6 @@
 .footer {
   background-color: var(--main-dark-clr);
-  padding: 4rem 2rem;
+  padding: 4rem 2rem 0 2rem;
 }
 
 .information,
@@ -13,7 +13,7 @@
   word-break: break-word;
 }
 
-h3 {
+.subheader {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -25,7 +25,7 @@ h3 {
   margin-bottom: 1.8rem;
 }
 
-h3::before {
+.subheader::before {
   content: '';
   display: inline-block;
   height: 10px;
@@ -46,7 +46,7 @@ h3::before {
 
 .inputWrapper input,
 .inputWrapper input::placeholder {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: var(--white-clr);
 }
 
@@ -54,8 +54,8 @@ h3::before {
   background-color: transparent;
   border: none;
   width: 100%;
-  border-bottom: 2px solid var(--white-clr);
-  padding-bottom: 1.1rem;
+  border-bottom: 1px solid var(--white-clr);
+  padding-bottom: 1.2rem;
 }
 
 .inputWrapper p {
@@ -64,4 +64,21 @@ h3::before {
   font-weight: 700;
   margin-top: 1rem;
   font-size: 0.65rem;
+}
+
+.websiteTerms {
+  --_background-clr: hsl(60, 2%, 10%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2rem;
+  padding: 1.3rem 2rem;
+  background-color: var(--_background-clr);
+  color: hsl(0, 0%, 37%);
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-top: 4rem;
+  box-shadow: 0 0 0 100vmax var(--_background-clr);
+  clip-path: inset(0 -100vmax);
 }
