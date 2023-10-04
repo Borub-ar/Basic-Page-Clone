@@ -7,7 +7,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: -0.28px;
-  margin-bottom: 1.8rem;
+  margin-block: 3rem 1.8rem;
 }
 
 .header::before {
@@ -17,4 +17,26 @@
   aspect-ratio: 1;
   background-color: var(--white-clr);
   border-radius: 50%;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.links {
+  font-size: 0.9rem;
+  color: var(--white-clr);
+}
+
+@media (width >= 1280px) {
+  .header {
+    font-size: 1.1rem;
+    margin-block: 0 1.5rem;
+  }
+
+  .links {
+    font-size: 1rem;
+  }
 }

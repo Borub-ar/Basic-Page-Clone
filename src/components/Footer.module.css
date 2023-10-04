@@ -1,11 +1,12 @@
 .footer {
+  --_max-content-width: 1200px;
   background-color: var(--main-dark-clr);
   padding: 4rem 2rem 0 2rem;
 }
 
-.information,
-.information a {
-  font-size: 1.3rem;
+.header,
+.header a {
+  font-size: clamp(1.3rem, 2.4vw, 2rem);
   font-weight: 700;
   color: var(--white-clr);
   margin-block: 3rem 6rem;
@@ -81,4 +82,48 @@
   margin-top: 4rem;
   box-shadow: 0 0 0 100vmax var(--_background-clr);
   clip-path: inset(0 -100vmax);
+}
+
+@media (width >= 1280px) {
+  .footer {
+    padding: 6rem 5rem 0 5rem;
+  }
+
+  .footerInnerWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5rem 7rem;
+    margin: 0 auto;
+    max-width: var(--_max-content-width);
+  }
+
+  .header,
+  .header a {
+    max-width: 25ch;
+    margin: 0;
+  }
+
+  .subheader {
+    font-size: 1.1rem;
+    margin-block: 0 1.5rem;
+  }
+
+  .inputWrapper input,
+  .inputWrapper input::placeholder {
+    font-size: 1.1rem;
+  }
+
+  .navWrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .websiteTerms {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 6rem auto 0 auto;
+    padding-inline: 0;
+    max-width: var(--_max-content-width);
+  }
 }

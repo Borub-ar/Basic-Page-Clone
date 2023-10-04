@@ -1,18 +1,23 @@
 import styles from './FooterNavigation.module.css';
 
-const FooterNavigation = props => {
-  //   const links = props.linksList.map(link => (
-  //     <li>
-  //       <a>{link.label}</a>
-  //     </li>
-  //   ));
+type navigationProps = {
+  header: string;
+  links: string[];
+};
+
+const FooterNavigation = ({ header, links }: navigationProps) => {
+  const linksElements = links.map(link => (
+    <li key={crypto.randomUUID()} className={styles.links}>
+      {link}
+    </li>
+  ));
 
   return (
     <nav aria-labelledby='navigationHeader'>
       <h3 className={styles.header} id='navigationHeader'>
-        {props.header}
+        {header}
       </h3>
-      {/* <ul>{links}</ul> */}
+      <ul className={styles.navigation}>{linksElements}</ul>
     </nav>
   );
 };
