@@ -21,11 +21,6 @@ const OFFICES_LINKS = [
 const Footer = () => {
   const [showSuccessMsg, setShowSuccessMsg] = useState<boolean>(false);
 
-  const arrowSVGStyles: object = {
-    position: 'absolute',
-    right: '0',
-  };
-
   const handleEmailSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setShowSuccessMsg(true);
@@ -45,9 +40,13 @@ const Footer = () => {
           <h3 className={styles.subheader}>Stay in the know</h3>
           <div className={styles.inputWrapper}>
             <label htmlFor='email-input'>Enter your email to subscribe</label>
+
             <input id='email-input' type='email' placeholder='Email Address' />
             {showSuccessMsg && <p>Thank you for signing up!</p>}
-            <RightArrow height='17' width='17' viewBox='0 0 17 17' color='#fff' styles={arrowSVGStyles} />
+            
+            <button className={styles.submitBtn} aria-label='Submit your email' type='submit'>
+              <RightArrow height='17' width='17' viewBox='0 0 17 17' color='#fff' />
+            </button>
           </div>
         </form>
 

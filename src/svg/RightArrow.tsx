@@ -3,19 +3,11 @@ type SvgProps = {
   height: string;
   color: string;
   viewBox: string;
-  styles: React.CSSProperties;
 };
 
-const RightArrow = ({ width, height, color, viewBox, styles }: SvgProps) => {
+const RightArrow = ({ width, height, color, viewBox }: SvgProps) => {
   return (
-    <svg
-      xmlns='http://www.w3.org/2000/svg'
-      role='img'
-      width={width}
-      height={height}
-      viewBox={viewBox}
-      fill={color}
-      style={styles}>
+    <svg xmlns='http://www.w3.org/2000/svg' role='img' width={width} height={height} viewBox={viewBox} fill={color}>
       <title>Right arrow</title>
       <path d='M.1 7.5h14v2H.1z'></path>
       <path d='m8.4 0 8.5 8.5-1.4 1.4L7 1.4 8.4 0z'></path>
