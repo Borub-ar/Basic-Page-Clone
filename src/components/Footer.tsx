@@ -27,6 +27,7 @@ const Footer = () => {
 
   const validateEmail = () => {
     const regexp = emailValidationRegexp.test(emailInputRef.current.value);
+    if (!regexp) setShowSuccessMsg(false);
     setInvalidEmail(!regexp);
     return regexp;
   };
@@ -59,7 +60,7 @@ const Footer = () => {
               ref={emailInputRef}
               onBlur={validateEmail}
               aria-invalid={invalidEmail}
-              aria-describedby='e'
+              aria-describedby='email-validation-msg'
             />
 
             {showSuccessMsg && <p>Thank you for signing up!</p>}
