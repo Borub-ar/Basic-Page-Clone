@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import styles from './Footer.module.css';
+import { emailValidationRegexp } from '../constants/constants.js';
 
 import BasicDebtLogo from '../svg/BasicDebtLogo';
 import RightArrow from '../svg/RightArrow';
@@ -20,10 +21,20 @@ const OFFICES_LINKS = [
 
 const Footer = () => {
   const [showSuccessMsg, setShowSuccessMsg] = useState<boolean>(false);
+  const [invalidEmail, setInvalidEmail] = useState<boolean>(false);
+
+  const emailInputRef = useRef(null);
+
+  const validateEmail = () => {
+    const regexp = emailValidationRegexp.test(emailInputRef.current.value);
+    setInvalidEmail(!regexp);
+    return regexp;
+  };
 
   const handleEmailSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setShowSuccessMsg(true);
+    const emailIsValid = validateEmail();
+    if (emailIsValid) setShowSuccessMsg(true);
   };
 
   return (
@@ -36,14 +47,24 @@ const Footer = () => {
           <a href='mailto: biz@basicagency.com'>biz@basicagency.com</a>
         </h2>
 
-        <form onSubmit={handleEmailSubmit}>
+        <form onSubmit={handleEmailSubmit} aria-label='Enter email to subscribe' autoComplete='off'>
           <h3 className={styles.subheader}>Stay in the know</h3>
           <div className={styles.inputWrapper}>
             <label htmlFor='email-input'>Enter your email to subscribe</label>
 
-            <input id='email-input' type='email' placeholder='Email Address' />
+            <input
+              id='email-input'
+              type='text'
+              placeholder='Email Address'
+              ref={emailInputRef}
+              onBlur={validateEmail}
+              aria-invalid={invalidEmail}
+              aria-describedby='e'
+            />
+
             {showSuccessMsg && <p>Thank you for signing up!</p>}
-            
+            {invalidEmail && <p id='email-validation-msg'>Email is invalid</p>}
+
             <button className={styles.submitBtn} aria-label='Submit your email' type='submit'>
               <RightArrow height='17' width='17' viewBox='0 0 17 17' color='#fff' />
             </button>
