@@ -1,4 +1,4 @@
-import Footer from '../../components/Footer';
+import Footer from '../../components/Footer/Footer';
 import styles from './Home.module.css';
 
 const Home = () => {
@@ -9,4 +9,4 @@ const Home = () => {
   );
 };
 
-export default Home; 
+export default Home;

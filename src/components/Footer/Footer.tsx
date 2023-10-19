@@ -1,10 +1,10 @@
 import { useState, useRef } from 'react';
 import styles from './Footer.module.css';
-import { emailValidationRegexp } from '../constants/constants.js';
+import { emailValidationRegexp } from '../../constants/constants.js';
 
-import BasicDebtLogo from '../svg/BasicDebtLogo';
-import RightArrow from '../svg/RightArrow';
-import FooterNavigation from './FooterNavigation';
+import BasicDebtLogo from '../../svg/BasicDebtLogo.js';
+import RightArrow from '../../svg/RightArrow.js';
+import FooterNavigation from './FooterNavigation.js';
 
 const SOCIAL_LINKS = ['instagram', 'Twitter', 'LinkedIn', 'Facebook'];
 const INITIATIVES_LINKS = ['Crafted', 'Applied', 'Brandbeats', 'Moves B®'];
@@ -82,8 +82,8 @@ const Footer = () => {
       <div className={styles.websiteTerms}>
         <p>BASIC/DEPT®, Inc 10 - 23©</p>
         <p>Easy to understand, impossible to ignore.™</p>
-        <nav aria-labelledby='websiteTermsHeader'>
-          <h3 id='websiteTermsHeader' className={styles.visuallyHidden}></h3>
+        <nav aria-labelledby='website-terms-header'>
+          <h3 id='website-terms-header' className={styles.visuallyHidden}></h3>
           <span>TERMS,</span> <span>PRIVACY POLICY</span>
         </nav>
       </div>
