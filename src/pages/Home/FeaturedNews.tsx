@@ -5,7 +5,10 @@ import NewsListing from '../../components/NewsListing/NewsListing';
 const FeaturedNews = () => {
   return (
     <section className={styles.newsWrapper}>
-      <h2>Featured News</h2>
+      <div className={styles.headerWrapper}>
+        <h2>FEATURED NEWS</h2>
+        <a href='#'>VIEW ALL</a>
+      </div>
       <NewsListing />
     </section>
   );

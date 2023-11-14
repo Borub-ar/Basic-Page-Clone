@@ -44,18 +44,18 @@
     visibility: hidden;
   }
 
-  & input,
-  & input::placeholder {
-    font-size: 0.9rem;
-    color: var(--white-clr);
-  }
-
   & input {
     background-color: transparent;
     border: none;
     width: 100%;
     border-bottom: 1px solid var(--white-clr);
     padding-bottom: 1.2rem;
+  }
+
+  & input,
+  & input::placeholder {
+    font-size: 0.9rem;
+    color: var(--white-clr);
   }
 
   & p {

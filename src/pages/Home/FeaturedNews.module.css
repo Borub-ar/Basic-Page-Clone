@@ -1,3 +1,29 @@
 .newsWrapper {
-  padding-inline: var(--page-inline-padding);
+  padding-inline: var(--page-inline-padding-mobile);
+}
+
+.headerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: var(---basic-h2-size);
+    color: var(--main-dark-clr);
+    max-width: min-content;
+  }
+
+  & a {
+    padding: 6px 30px;
+    background-color: transparent;
+    border: 1ps solid var(--main-dark-clr);
+    color: var(--main-dark-clr);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.7rem;
+    border: 1px solid var(--main-dark-clr);
+    border-radius: 50px;
+  }
 }

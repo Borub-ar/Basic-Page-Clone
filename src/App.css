@@ -4,7 +4,8 @@
 }
 
 :root {
-  --page-inline-padding: 27px;
+  --page-inline-padding-mobile: 27px;
+  ---basic-h2-size: 1.6rem;
   --base-background-clr: hsl(47, 70%, 96%);
   --main-dark-clr: hsl(40, 4%, 14%);
   --white-clr: hsl(0, 0%, 100%);
@@ -26,19 +27,18 @@ html {
   border-radius: 3px;
 }
 
-:is(body, h1, h2, h3, h4, h5, h6, p, ol, ul) {
+:where(body, h1, h2, h3, h4, h5, h6, p, ol, ul) {
   margin: 0;
   padding: 0;
   font-weight: normal;
 }
 
-button {
-  cursor: pointer;
+:where(ol, ul) {
+  list-style: none;
 }
 
-ol,
-ul {
-  list-style: none;
+button {
+  cursor: pointer;
 }
 
 img {
@@ -49,4 +49,10 @@ img {
 body {
   font-family: SctoGroteskA;
   background-color: var(--base-background-clr);
+}
+
+@media (width >= 1280px) {
+  :root {
+    --page-inline-padding-mobile: 80px;
+  }
 }
