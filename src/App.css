@@ -3,6 +3,13 @@
   src: url('./assets/font/SctoGroteskA.ttf');
 }
 
+:root {
+  --page-inline-padding: 27px;
+  --base-background-clr: hsl(47, 70%, 96%);
+  --main-dark-clr: hsl(40, 4%, 14%);
+  --white-clr: hsl(0, 0%, 100%);
+}
+
 html {
   box-sizing: border-box;
 }
@@ -37,12 +44,6 @@ ul {
 img {
   max-width: 100%;
   height: auto;
-}
-
-:root {
-  --base-background-clr: hsl(47, 70%, 96%);
-  --main-dark-clr: hsl(40, 4%, 14%);
-  --white-clr: hsl(0, 0%, 100%);
 }
 
 body {
