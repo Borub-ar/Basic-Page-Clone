@@ -1,16 +1,20 @@
 // import { styles } from './NewsListing.module.css';
 import NewsTile from './NewsTile';
 
-const NewsListing = () => {
-  return (
-    <div>
-      <NewsTile />
-      <NewsTile />
-      <NewsTile />
-      <NewsTile />
-      <NewsTile />
-    </div>
-  );
+type contentProps = {
+  title: string;
+  image: string;
+  imageAlt: string;
+  pressNumber: string;
+  link: string;
+}[];
+
+const NewsListing = (props: contentProps) => {
+  const { content } = props;
+
+  const tiles = content.map(data => <NewsTile key={crypto.randomUUID()} />);
+  
+  return <div>{tiles}</div>;
 };
 
 export default NewsListing;

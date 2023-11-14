@@ -8,7 +8,6 @@
   justify-content: space-between;
 
   & h2 {
-    text-transform: uppercase;
     font-weight: 700;
     font-size: var(---basic-h2-size);
     color: var(--main-dark-clr);
