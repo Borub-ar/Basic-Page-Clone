@@ -5,6 +5,7 @@ import NewsListing from '../../components/NewsListing/NewsListing';
 
 const FeaturedNews = () => {
   const newsContent = content.content;
+  console.log(newsContent);
 
   return (
     <section className={styles.newsWrapper}>

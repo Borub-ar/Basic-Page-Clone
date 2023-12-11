@@ -12,6 +12,7 @@
     font-size: var(---basic-h2-size);
     color: var(--main-dark-clr);
     max-width: min-content;
+    margin-bottom: 2.5rem;
   }
 
   & a {

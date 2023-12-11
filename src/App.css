@@ -9,6 +9,10 @@
   --base-background-clr: hsl(47, 70%, 96%);
   --main-dark-clr: hsl(40, 4%, 14%);
   --white-clr: hsl(0, 0%, 100%);
+
+  @media (width >= 1280px) {
+    --page-inline-padding-mobile: 80px;
+  }
 }
 
 html {
@@ -49,10 +53,4 @@ img {
 body {
   font-family: SctoGroteskA;
   background-color: var(--base-background-clr);
-}
-
-@media (width >= 1280px) {
-  :root {
-    --page-inline-padding-mobile: 80px;
-  }
 }
