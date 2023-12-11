@@ -1,10 +1,22 @@
 article {
-  border-top: 2px solid rgb(37, 37, 37);
   display: flex;
   flex-direction: column;
   gap: 1.3rem;
   padding-top: 1rem;
   margin-bottom: 1rem;
+  border-top: 1px solid rgba(37, 37, 37, 0.452);
+
+  @media (width > 720px) {
+    flex-direction: row;
+  }
+}
+
+article:hover .textPanel h4 {
+  text-decoration: underline;
+}
+
+article:hover img {
+  transform: scale(1);
 }
 
 a {
@@ -18,10 +30,12 @@ a {
 
 img {
   aspect-ratio: 3 / 2;
+  transform: scale(1.05);
   transition: transform 0.3s ease-in-out;
+  height: 100%;
 
-  &:hover {
-    transform: scale(1.2);
+  @media (width > 720px) {
+    width: clamp(17rem, 33vw, 40rem);
   }
 }
 
@@ -30,7 +44,7 @@ img {
   grid-template-columns: 1fr auto;
   grid-template-rows: 1fr auto;
 
-  & > h4 {
+  & h4 {
     grid-area: 1 / 1 / 2 / 3;
     text-transform: uppercase;
     text-decoration: none;
@@ -39,12 +53,27 @@ img {
     margin-bottom: 3rem;
   }
 
-  & > div {
+  & div {
     grid-area: 2 / 2 / 3 / 3;
   }
 
-  & > p {
+  & p {
     font-size: 11px;
     font-weight: 700;
+  }
+
+  @media (width > 720px) {
+    width: 100%;
+    column-gap: 4rem;
+
+    & h4 {
+      max-width: 650px;
+      font-size: clamp(0.8rem, 3vw, 2.5rem);
+      margin-bottom: 0;
+    }
+
+    & div {
+      grid-row: 1/2;
+    }
   }
 }

@@ -12,8 +12,8 @@ type contentProps = {
 const NewsListing = (props: contentProps) => {
   const { content } = props;
 
-  const tiles = content.map(data => <NewsTile key={crypto.randomUUID()} />);
-  
+  const tiles = content.map(data => <NewsTile key={crypto.randomUUID()} tileData={data} />);
+
   return <div>{tiles}</div>;
 };
 
