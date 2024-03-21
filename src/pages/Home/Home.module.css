@@ -46,6 +46,7 @@
 .innerWrapper::after {
   content: '';
   position: fixed;
+  pointer-events: none;
   top: -10rem;
   left: -10rem;
   width: calc(100% + 20rem);
