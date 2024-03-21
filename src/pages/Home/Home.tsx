@@ -5,7 +5,9 @@ import FeaturedNews from './FeaturedNews';
 const Home = () => {
   return (
     <main className={styles.homeWrapper}>
-      <FeaturedNews />
+      <div className={styles.innerWrapper}>
+        <FeaturedNews />
+      </div>
       <Footer />
     </main>
   );
