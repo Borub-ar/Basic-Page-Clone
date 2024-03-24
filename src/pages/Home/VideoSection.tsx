@@ -4,18 +4,32 @@ import styles from './VideoSection.module.css';
 
 const VideoSection = () => {
   const sectionRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
+  // const [isVisible, setIsVisible] = useState(false);
   const portalContext = useContext(PortalContext);
 
   useEffect(() => {
     const options = {
       root: document.querySelector('#scrollArea'),
-      rootMargin: '0px',
-      threshold: 0.5,
+      rootMargin: '100px',
+      threshold: 0.4,
     };
 
-    const callback = () => {
-      portalContext.changePageTheme();
+    let firstCallImminent = true;
+
+    const callback = (entries: IntersectionObserverEntry[]) => {
+      if (!firstCallImminent) {
+        return;
+      } else {
+        firstCallImminent = false;
+      }
+
+      entries.forEach(entry => {
+        if (entry.intersectionRatio > 0) {
+          portalContext.changePageTheme(true);
+        } else {
+          portalContext.changePageTheme(false);
+        }
+      });
     };
 
     const observer = new IntersectionObserver(callback, options);

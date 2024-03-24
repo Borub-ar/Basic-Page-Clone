@@ -4,11 +4,14 @@
 }
 
 :root {
-  --page-inline-padding-mobile: 27px;
-  ---basic-h2-size: 1.6rem;
   --base-background-clr: hsl(47, 70%, 96%);
+  --base-pink-clr: hsl(0, 79%, 89%);
   --main-dark-clr: hsl(40, 4%, 14%);
   --white-clr: hsl(0, 0%, 100%);
+
+  --page-inline-padding-mobile: 27px;
+
+  ---basic-h2-size: 1.6rem;
 
   @media (width >= 1280px) {
     --page-inline-padding-mobile: 80px;
@@ -53,4 +56,7 @@ img {
 body {
   font-family: SctoGroteskA;
   background-color: var(--base-background-clr);
+  -webkit-transition: background-color 1000ms linear;
+  -ms-transition: background-color 1000ms linear;
+  transition: background-color 1000ms linear;
 }
