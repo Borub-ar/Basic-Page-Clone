@@ -1,9 +1,11 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useContext } from 'react';
+import PortalContext from '../../store/portal-context';
 import styles from './VideoSection.module.css';
 
 const VideoSection = () => {
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+  const portalContext = useContext(PortalContext);
 
   useEffect(() => {
     const options = {
@@ -13,7 +15,7 @@ const VideoSection = () => {
     };
 
     const callback = () => {
-      console.log('aaa');
+      portalContext.changePageTheme();
     };
 
     const observer = new IntersectionObserver(callback, options);
