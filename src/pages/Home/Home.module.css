@@ -53,5 +53,5 @@
   height: calc(100% + 20rem);
   background: url('../../assets/images/Background_Noise.png');
   background-position: 50%;
-  animation: Noise 1s steps(2) infinite;
+  /* animation: Noise 1s steps(2) infinite; */
 }

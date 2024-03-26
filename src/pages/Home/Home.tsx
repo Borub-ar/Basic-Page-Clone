@@ -6,13 +6,13 @@ import Footer from '../../components/Footer/Footer';
 
 const Home = () => {
   return (
-    <main className={styles.homeWrapper}>
+    <div className={styles.homeWrapper}>
       <div className={styles.innerWrapper}>
         <VideoSection />
         <FeaturedNews />
       </div>
       <Footer />
-    </main>
+    </div>
   );
 };
 

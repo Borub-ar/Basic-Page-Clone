@@ -1,8 +1,13 @@
 import './App.css';
+import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
+
 import PortalContext from './store/portal-context';
 import Home from './pages/Home/Home';
+import { useRef } from 'react';
 
 function App() {
+  const containerRef = useRef(null);
+
   const changePageTheme = (isInViewport: boolean) => {
     if (isInViewport) {
       document.documentElement.style.setProperty('--base-background-clr', '#252422ff');
@@ -18,9 +23,13 @@ function App() {
   };
 
   return (
-    <PortalContext.Provider value={contextValues}>
-      <Home />
-    </PortalContext.Provider>
+    <LocomotiveScrollProvider options={{ smooth: true }} containerRef={containerRef}>
+      <PortalContext.Provider value={contextValues}>
+        <main data-scroll-container ref={containerRef}>
+          <Home />
+        </main>
+      </PortalContext.Provider>
+    </LocomotiveScrollProvider>
   );
 }
 
