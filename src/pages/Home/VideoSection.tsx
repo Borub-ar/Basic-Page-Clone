@@ -1,10 +1,9 @@
-import { useEffect, useRef, useState, useContext } from 'react';
+import { useEffect, useRef, useContext } from 'react';
 import PortalContext from '../../store/portal-context';
 import styles from './VideoSection.module.css';
 
 const VideoSection = () => {
   const sectionRef = useRef(null);
-  // const [isVisible, setIsVisible] = useState(false);
   const portalContext = useContext(PortalContext);
 
   useEffect(() => {
@@ -14,17 +13,9 @@ const VideoSection = () => {
       threshold: 0.4,
     };
 
-    let firstCallImminent = true;
-
     const callback = (entries: IntersectionObserverEntry[]) => {
-      if (!firstCallImminent) {
-        return;
-      } else {
-        firstCallImminent = false;
-      }
-
       entries.forEach(entry => {
-        if (entry.intersectionRatio > 0) {
+        if (entry.isIntersecting) {
           portalContext.changePageTheme(true);
         } else {
           portalContext.changePageTheme(false);
@@ -33,6 +24,7 @@ const VideoSection = () => {
     };
 
     const observer = new IntersectionObserver(callback, options);
+
     if (sectionRef.current) observer.observe(sectionRef.current);
 
     return () => {

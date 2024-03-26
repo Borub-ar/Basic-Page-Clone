@@ -5,6 +5,7 @@ article {
   padding-top: 1rem;
   margin-bottom: 1rem;
   border-top: 1px solid var(--main-dark-clr);
+  transition: border-color var(--colors-transition);
 
   @media (width > 720px) {
     flex-direction: row;
@@ -61,6 +62,7 @@ img {
   & p {
     font-size: 11px;
     font-weight: 700;
+    color: var(--main-dark-clr);
   }
 
   @media (width > 720px) {
@@ -69,7 +71,7 @@ img {
 
     & h4 {
       max-width: 650px;
-      font-size: clamp(0.8rem, 3vw, 2.5rem);
+      font-size: clamp(0.2rem, 2vw, 2.5rem);
       margin-bottom: 0;
     }
 

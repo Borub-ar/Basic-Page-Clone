@@ -1,5 +1,7 @@
 .newsWrapper {
   padding-inline: var(--page-inline-padding-mobile);
+  background-color: var(--base-background-clr);
+  transition: background-color var(--colors-transition);
 }
 
 .headerWrapper {
