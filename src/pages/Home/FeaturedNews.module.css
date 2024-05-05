@@ -17,41 +17,5 @@
     margin-bottom: 2.5rem;
   }
 
-  & a {
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    padding: 6px 30px;
-    background-color: transparent;
-    border: 1ps solid var(--main-dark-clr);
-    color: var(--main-dark-clr);
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 0.7rem;
-    border: 1px solid var(--main-dark-clr);
-    border-radius: 50px;
-    transition: color 0.3s;
-  }
 
-  & a::before {
-    content: '';
-    position: absolute;
-    z-index: -2;
-    bottom: -100%;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgb(0, 0, 0);
-    margin-right: 10px;
-    transition: translate 0.3s;
-  }
-
-  & a:hover {
-    color: var(--white-clr);
-  }
-
-  & a:hover::before {
-    translate: 0 -100%;
-    background-color: rgb(0, 0, 0);
-  }
 }

@@ -10,7 +10,7 @@ const VideoSection = () => {
     const options = {
       root: document.querySelector('#scrollArea'),
       rootMargin: '100px',
-      threshold: 0.4,
+      threshold: 0.7,
     };
 
     const callback = (entries: IntersectionObserverEntry[]) => {
