@@ -1,11 +1,11 @@
 import styles from './FooterNavigation.module.css';
 
-type navigationProps = {
+type FooterNavigationProps = {
   header: string;
   links: string[];
 };
 
-const FooterNavigation = ({ header, links }: navigationProps) => {
+const FooterNavigation = ({ header, links }: FooterNavigationProps) => {
   const linksElements = links.map(link => (
     <li key={crypto.randomUUID()} className={styles.links}>
       {link}

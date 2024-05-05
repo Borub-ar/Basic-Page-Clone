@@ -1,10 +1,10 @@
-import content from '../../content/Home/FeaturedNews.json';
+import News from '../../content/Home/FeaturedNews.json';
 import styles from './FeaturedNews.module.css';
 
 import NewsListing from '../../components/NewsListing/NewsListing';
 
 const FeaturedNews = () => {
-  const newsContent = content.content;
+  const newsContent = News.content;
 
   return (
     <section className={styles.newsWrapper}>

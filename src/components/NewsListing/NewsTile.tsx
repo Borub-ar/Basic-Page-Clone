@@ -1,16 +1,16 @@
 import styles from './NewsTile.module.css';
 
-type contentProps = {
-  title: string;
-  image: string;
-  imageAlt: string;
-  pressNumber: string;
-  link: string;
+type NewsTileProps = {
+  tileData: {
+    title: string;
+    image: string;
+    imageAlt: string;
+    pressNumber: string;
+    link: string;
+  };
 };
 
-const NewsTile = (props: contentProps) => {
-  const { tileData } = props;
-
+const NewsTile = ({ tileData }: NewsTileProps) => {
   return (
     <a href='#'>
       <article>

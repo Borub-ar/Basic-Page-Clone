@@ -1,5 +1,4 @@
 import './App.css';
-import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 
 import PortalContext from './store/portal-context';
 import Home from './pages/Home/Home';
@@ -23,13 +22,11 @@ function App() {
   };
 
   return (
-    <LocomotiveScrollProvider options={{ smooth: true }} containerRef={containerRef}>
-      <PortalContext.Provider value={contextValues}>
-        <main data-scroll-container ref={containerRef}>
-          <Home />
-        </main>
-      </PortalContext.Provider>
-    </LocomotiveScrollProvider>
+    <PortalContext.Provider value={contextValues}>
+      <main data-scroll-container ref={containerRef}>
+        <Home />
+      </main>
+    </PortalContext.Provider>
   );
 }
 
