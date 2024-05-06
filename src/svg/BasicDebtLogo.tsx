@@ -1,4 +1,4 @@
-import { SvgProps } from '../types/svg';
+import { type SvgProps } from '../types/types';
 
 const BasicDebtLogo = ({ width, height, color, viewBox }: SvgProps) => {
   return (

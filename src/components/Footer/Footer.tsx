@@ -8,6 +8,7 @@ import FooterNavigation from './FooterNavigation.js';
 
 const SOCIAL_LINKS = ['instagram', 'Twitter', 'LinkedIn', 'Facebook'];
 const INITIATIVES_LINKS = ['Crafted', 'Applied', 'Brandbeats', 'Moves B®'];
+
 const OFFICES_LINKS = [
   'San Diego - CA',
   'New York - NY',
@@ -23,10 +24,10 @@ const Footer = () => {
   const [showSuccessMsg, setShowSuccessMsg] = useState<boolean>(false);
   const [invalidEmail, setInvalidEmail] = useState<boolean>(false);
 
-  const emailInputRef = useRef(null);
+  const emailInputRef = useRef<HTMLInputElement>(null);
 
   const validateEmail = () => {
-    const regexp = emailValidationRegexp.test(emailInputRef.current.value);
+    const regexp = emailInputRef.current?.value ? emailValidationRegexp.test(emailInputRef.current.value) : false;
     if (!regexp) setShowSuccessMsg(false);
     setInvalidEmail(!regexp);
     return regexp;
