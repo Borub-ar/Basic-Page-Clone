@@ -13,7 +13,7 @@
 
   --page-inline-padding-mobile: 27px;
 
-  ---basic-h2-size: 1.6rem;
+  ---basic-h2-size: 2.2rem;
   --colors-transition: 400ms linear;
 
   @media (width >= 1280px) {

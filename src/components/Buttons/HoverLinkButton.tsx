@@ -1,4 +1,4 @@
-import styles from './HoverButton.module.css';
+import styles from './HoverLinkButton.module.css';
 
 type HoverButtonProps = {
   href: string;

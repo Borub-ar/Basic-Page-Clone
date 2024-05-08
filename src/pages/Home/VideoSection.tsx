@@ -1,6 +1,7 @@
 import { useEffect, useRef, useContext } from 'react';
 import PortalContext from '../../store/portal-context';
 import styles from './VideoSection.module.css';
+import HoverButton from '../../components/Buttons/HoverLinkButton';
 
 const VideoSection = () => {
   const sectionRef = useRef(null);
@@ -10,7 +11,7 @@ const VideoSection = () => {
     const options = {
       root: document.querySelector('#scrollArea'),
       rootMargin: '100px',
-      threshold: 0.7,
+      threshold: 0.9,
     };
 
     const callback = (entries: IntersectionObserverEntry[]) => {
@@ -30,7 +31,7 @@ const VideoSection = () => {
     return () => {
       if (sectionRef.current) observer.unobserve(sectionRef.current);
     };
-  }, []);
+  }, [portalContext]);
 
   return (
     <section className={styles.wrapper} ref={sectionRef}>
@@ -38,8 +39,10 @@ const VideoSection = () => {
 
       <div className={styles.textWrapper}>
         <h2 className={styles.header}>BASIC/DEPT® HELPS BRANDS ● CONNECT W/ CULTURE</h2>
-        {/* <p>ADWEEK AGENCY SPOTLIGHT</p>
-        <button>ABOUT US</button> */}
+        <p>
+          ADWEEK <span>AGENCY SPOTLIGHT</span>
+        </p>
+        <HoverButton href='#'>ABOUT US</HoverButton>
       </div>
     </section>
   );

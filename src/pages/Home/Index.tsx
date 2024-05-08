@@ -1,10 +1,10 @@
-import styles from './Home.module.css';
+import styles from './Index.module.css';
 
 import FeaturedNews from './FeaturedNews';
 import VideoSection from './VideoSection';
 import Footer from '../../components/Footer/Footer';
 
-const Home = () => {
+export const Home = () => {
   return (
     <div className={styles.homeWrapper}>
       <div className={styles.innerWrapper}>
@@ -15,5 +15,3 @@ const Home = () => {
     </div>
   );
 };
-
-export default Home;

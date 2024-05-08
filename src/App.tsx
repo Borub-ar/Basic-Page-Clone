@@ -1,7 +1,7 @@
 import './App.css';
 
 import PortalContext from './store/portal-context';
-import Home from './pages/Home/Home';
+import { Home } from './pages/Home/Index';
 import { useRef } from 'react';
 
 function App() {

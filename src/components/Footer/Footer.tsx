@@ -21,8 +21,8 @@ const OFFICES_LINKS = [
 ];
 
 const Footer = () => {
-  const [showSuccessMsg, setShowSuccessMsg] = useState<boolean>(false);
-  const [invalidEmail, setInvalidEmail] = useState<boolean>(false);
+  const [showSuccessMsg, setShowSuccessMsg] = useState(false);
+  const [invalidEmail, setInvalidEmail] = useState(false);
 
   const emailInputRef = useRef<HTMLInputElement>(null);
 
