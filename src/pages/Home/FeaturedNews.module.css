@@ -1,9 +1,3 @@
-.newsWrapper {
-  padding-inline: var(--page-inline-padding-mobile);
-  background-color: var(--base-background-clr);
-  transition: background-color var(--colors-transition);
-}
-
 .headerWrapper {
   display: flex;
   align-items: center;
@@ -16,6 +10,4 @@
     max-width: min-content;
     margin-bottom: 2.5rem;
   }
-
-
 }

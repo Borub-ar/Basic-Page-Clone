@@ -1,8 +1,8 @@
-import './App.css';
-
-import PortalContext from './store/portal-context';
-import { Home } from './pages/Home/Index';
 import { useRef } from 'react';
+import PortalContext from './store/portal-context';
+
+import { Home } from './pages/Home/Index';
+import './App.css';
 
 function App() {
   const containerRef = useRef(null);
@@ -23,7 +23,7 @@ function App() {
 
   return (
     <PortalContext.Provider value={contextValues}>
-      <main data-scroll-container ref={containerRef}>
+      <main ref={containerRef}>
         <Home />
       </main>
     </PortalContext.Provider>

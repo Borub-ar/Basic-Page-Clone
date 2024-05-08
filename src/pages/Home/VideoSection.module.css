@@ -2,11 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding-inline: var(--page-inline-padding-mobile);
   padding-bottom: 6rem;
-  margin-top: 20rem;
-  background-color: var(--base-background-clr);
-  transition: background-color var(--colors-transition);
 
   @media (width > 720px) {
     flex-direction: row;

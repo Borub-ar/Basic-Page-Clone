@@ -8,9 +8,9 @@ const FeaturedNews = () => {
   const newsContent = News.content;
 
   return (
-    <section className={styles.newsWrapper}>
+    <section>
       <div className={styles.headerWrapper}>
-        <h2>FEATURED NEWS</h2>
+        <h2 className='section_header--2'>FEATURED NEWS</h2>
         <HoverButton href='#'>VIEW ALL</HoverButton>
       </div>
       <NewsListing content={newsContent} />
