@@ -22,7 +22,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: var(--black-clr);
+    background-color: var(--main-dark-clr);
     margin-right: 10px;
     transition: translate 0.3s;
   }

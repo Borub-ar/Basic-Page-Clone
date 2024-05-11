@@ -1,4 +1,5 @@
 import styles from './NewsTile.module.css';
+import RightArrow from '../Svg/RightArrow';
 
 type NewsTileProps = {
   tileData: {
@@ -20,7 +21,11 @@ const NewsTile = ({ tileData }: NewsTileProps) => {
 
         <div className={styles.textPanel}>
           <h4>{tileData.title}</h4>
-          <div>Arrow</div>
+
+          <div className={styles.arrowWrapper}>
+            <RightArrow width='50' height='50' viewBox='0 0 30 30' color='#000' />
+          </div>
+
           <p>PRESS {tileData.pressNumber}</p>
         </div>
       </article>

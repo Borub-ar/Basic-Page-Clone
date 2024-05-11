@@ -14,9 +14,8 @@
 }
 
 video {
-  width: 400px;
-
   @media (width > 720px) {
+    width: 400px;
     order: 2;
   }
 }

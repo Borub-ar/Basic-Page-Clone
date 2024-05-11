@@ -1,4 +1,4 @@
-import { type SvgProps } from '../types/types';
+import { type SvgProps } from '../../types/types';
 
 const RightArrow = ({ width, height, color, viewBox }: SvgProps) => {
   return (

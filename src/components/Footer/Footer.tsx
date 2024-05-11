@@ -2,8 +2,8 @@ import { useState, useRef } from 'react';
 import styles from './Footer.module.css';
 import { emailValidationRegexp } from '../../constants/constants.js';
 
-import BasicDebtLogo from '../../svg/BasicDebtLogo.js';
-import RightArrow from '../../svg/RightArrow.js';
+import BasicDebtLogo from '../Svg/BasicDebtLogo.js';
+import RightArrow from '../Svg/RightArrow.js';
 import FooterNavigation from './FooterNavigation.js';
 
 const SOCIAL_LINKS = ['instagram', 'Twitter', 'LinkedIn', 'Facebook'];
