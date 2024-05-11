@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import PortalContext from './store/portal-context';
 import './App.css';
 
@@ -10,7 +10,14 @@ const setCustomCSSVariable = (property: string, value: string) => {
 };
 
 function App() {
+  const [showOverlay, setShowOverlay] = useState(true);
   const containerRef = useRef(null);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowOverlay(false);
+    }, 500);
+  }, []);
 
   const changePageTheme = (isInViewport: boolean) => {
     if (isInViewport) {
@@ -32,7 +39,7 @@ function App() {
   return (
     <PortalContext.Provider value={contextValues}>
       <main ref={containerRef}>
-        <StartingOverlay />
+        <StartingOverlay showOverlay={showOverlay} />
         <Home />
       </main>
     </PortalContext.Provider>
