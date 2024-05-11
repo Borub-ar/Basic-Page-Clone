@@ -2,7 +2,7 @@ import News from '../../content/Home/FeaturedNews.json';
 import styles from './FeaturedNews.module.css';
 
 import NewsListing from '../../components/NewsListing/NewsListing';
-import HoverButton from '../../components/Buttons/HoverLinkButton';
+import HoverButton from '../../components/Buttons/HoverButton';
 
 const FeaturedNews = () => {
   const newsContent = News.content;

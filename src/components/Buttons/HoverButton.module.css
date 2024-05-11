@@ -2,7 +2,7 @@
   position: relative;
   z-index: 1;
   overflow: hidden;
-  padding: 6px 30px;
+  padding: 9px 30px;
   background-color: transparent;
   border: 1ps solid var(--main-dark-clr);
   color: var(--main-dark-clr);
@@ -22,7 +22,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgb(0, 0, 0);
+    background-color: var(--black-clr);
     margin-right: 10px;
     transition: translate 0.3s;
   }
@@ -33,6 +33,5 @@
 
   &:hover::before {
     translate: 0 -100%;
-    background-color: rgb(0, 0, 0);
   }
 }

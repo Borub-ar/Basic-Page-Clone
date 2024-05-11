@@ -2,7 +2,7 @@ import { useEffect, useRef, useContext } from 'react';
 import PortalContext from '../../store/portal-context';
 import styles from './VideoSection.module.css';
 
-import HoverButton from '../../components/Buttons/HoverLinkButton';
+import HoverButton from '../../components/Buttons/HoverButton';
 
 const VideoSection = () => {
   const sectionRef = useRef<HTMLTableSectionElement>(null);
@@ -32,7 +32,7 @@ const VideoSection = () => {
 
   return (
     <section className={styles.wrapper} ref={sectionRef}>
-      <video preload='metadata' autoPlay>
+      <video preload='metadata' autoPlay loop muted>
         <source
           src='https://cdn.sanity.io/files/8nn8fua5/production/e4a840ba8dfeded08ac4d0ba6e930be56fc68e3b.mp4'
           type='video/mp4'

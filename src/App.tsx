@@ -4,16 +4,23 @@ import PortalContext from './store/portal-context';
 import { Home } from './pages/Home/Index';
 import './App.css';
 
+const setCustomCSSVariable = (property: string, value: string) => {
+  document.documentElement.style.setProperty(property, value);
+};
+
 function App() {
   const containerRef = useRef(null);
 
   const changePageTheme = (isInViewport: boolean) => {
     if (isInViewport) {
-      document.documentElement.style.setProperty('--base-background-clr', '#252422ff');
-      document.documentElement.style.setProperty('--main-dark-clr', '#f9cdcd');
+      setCustomCSSVariable('--base-background-clr', '#252422ff');
+      setCustomCSSVariable('--main-dark-clr', '#f9cdcd');
+      setCustomCSSVariable('--black-clr', '#f9cdcd');
     } else {
-      document.documentElement.style.setProperty('--base-background-clr', '#fcf9ee');
-      document.documentElement.style.setProperty('--main-dark-clr', '#252422');
+      setCustomCSSVariable('--base-background-clr', '#fcf9ee');
+      setCustomCSSVariable('--main-dark-clr', '#252422');
+      setCustomCSSVariable('--black-clr', '#000');
+      setCustomCSSVariable('--black-clr', '#000');
     }
   };
 
