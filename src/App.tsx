@@ -1,8 +1,9 @@
 import { useRef } from 'react';
 import PortalContext from './store/portal-context';
+import './App.css';
 
 import { Home } from './pages/Home/Index';
-import './App.css';
+import StartingOverlay from './components/StartingOverlay/StartingOverlay';
 
 const setCustomCSSVariable = (property: string, value: string) => {
   document.documentElement.style.setProperty(property, value);
@@ -31,6 +32,7 @@ function App() {
   return (
     <PortalContext.Provider value={contextValues}>
       <main ref={containerRef}>
+        <StartingOverlay />
         <Home />
       </main>
     </PortalContext.Provider>
