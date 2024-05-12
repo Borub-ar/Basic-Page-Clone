@@ -28,7 +28,6 @@ function App() {
       setCustomCSSVariable('--base-background-clr', '#fcf9ee');
       setCustomCSSVariable('--main-dark-clr', '#252422');
       setCustomCSSVariable('--black-clr', '#000');
-      setCustomCSSVariable('--black-clr', '#000');
     }
   };
 

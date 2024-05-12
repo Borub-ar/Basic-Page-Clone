@@ -39,7 +39,7 @@
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-100%);
+    transform: translateY(var(--_collapse-y));
   }
 }
 
@@ -54,13 +54,15 @@
   background-color: var(--base-background-clr);
 
   &::after {
+    --_dimensions: calc(100% + 20rem);
+    --_position: -10rem;
     content: '';
     position: fixed;
     pointer-events: none;
-    top: -10rem;
-    left: -10rem;
-    width: calc(100% + 20rem);
-    height: calc(100% + 20rem);
+    top: var(--_position);
+    left: var(--_position);
+    width: var(--_dimensions);
+    height: var(--_dimensions);
     background: url('../../assets/images/Background_Noise.png');
     background-position: 50%;
     animation: Noise 1s steps(2) infinite;
@@ -79,6 +81,7 @@
 }
 
 .overlay.hide {
+  --_collapse-y: -200%;
   animation: Collapse 0.7s cubic-bezier(0.72, 0, 0.28, 1) 1.2s forwards;
 }
 
@@ -86,6 +89,7 @@
   position: relative;
 
   &::after {
+    --_collapse-y: -100%;
     content: '';
     position: absolute;
     z-index: 10;
