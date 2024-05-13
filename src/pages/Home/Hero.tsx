@@ -5,7 +5,7 @@ const VIDEO_URL = 'https://cdn.sanity.io/files/8nn8fua5/production/c6fb986a862cb
 const Hero = () => {
   return (
     <section className={styles.hero}>
-      <video preload='metadata' autoPlay controls loop muted>
+      <video preload='metadata' autoPlay loop muted>
         <source src={VIDEO_URL} type='video/mp4' />
       </video>
     </section>

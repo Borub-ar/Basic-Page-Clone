@@ -1,0 +1,23 @@
+.follower {
+  --y: 0px;
+  --x: 0px;
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 120px;
+  aspect-ratio: 1;
+  background-color: var(--white-clr);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 2;
+
+  & span {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+}
