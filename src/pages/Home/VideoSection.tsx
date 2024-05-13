@@ -4,6 +4,8 @@ import styles from './VideoSection.module.css';
 
 import HoverButton from '../../components/Buttons/HoverButton';
 
+const VIDEO_URL = 'https://cdn.sanity.io/files/8nn8fua5/production/e4a840ba8dfeded08ac4d0ba6e930be56fc68e3b.mp4';
+
 const VideoSection = () => {
   const sectionRef = useRef<HTMLTableSectionElement>(null);
   const portalContext = useContext(PortalContext);
@@ -33,10 +35,7 @@ const VideoSection = () => {
   return (
     <section className={styles.wrapper} ref={sectionRef}>
       <video preload='metadata' autoPlay loop muted>
-        <source
-          src='https://cdn.sanity.io/files/8nn8fua5/production/e4a840ba8dfeded08ac4d0ba6e930be56fc68e3b.mp4'
-          type='video/mp4'
-        />
+        <source src={VIDEO_URL} type='video/mp4' />
       </video>
 
       {/* Empty div serves as wrapper for sticky element */}
@@ -46,7 +45,7 @@ const VideoSection = () => {
           <p>
             ADWEEK <span>AGENCY SPOTLIGHT</span>
           </p>
-          <HoverButton href='#'>ABOUT US</HoverButton>
+          <HoverButton>ABOUT US</HoverButton>
         </div>
       </div>
     </section>

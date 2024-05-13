@@ -34,16 +34,16 @@
   }
 }
 
-.homeWrapper {
+.home-wrapper {
   background-color: var(--base-background-clr);
   min-height: 100vh;
 }
 
-.innerWrapper {
+.inner_noise_wrapper {
   position: relative;
 }
 
-.innerWrapper::after {
+.inner_noise_wrapper::after {
   content: '';
   position: fixed;
   pointer-events: none;
