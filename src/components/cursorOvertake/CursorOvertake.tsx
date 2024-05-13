@@ -27,13 +27,13 @@ const CursorOvertake = ({ children, followerText, subtext }: CursorOvertakeProps
   const resetFollowerPosition = () => {
     if (!followerRef.current || !wrapperRef.current) return;
 
-    const parentWidth = wrapperRef.current.offsetWidth || 0;
-    const parentHeight = wrapperRef.current.offsetHeight || 0;
+    const wrapperWidth = wrapperRef.current.offsetWidth || 0;
+    const wrapperHeight = wrapperRef.current.offsetHeight || 0;
     const followerWidth = followerRef.current.offsetWidth;
     const followerHeight = followerRef.current.offsetHeight;
 
-    const x = (parentWidth - followerWidth) / 2;
-    const y = (parentHeight - followerHeight) / 2;
+    const x = (wrapperWidth - followerWidth) / 2;
+    const y = (wrapperHeight - followerHeight) / 2;
 
     followerRef.current.style.setProperty('--x', `${x}px`);
     followerRef.current.style.setProperty('--y', `${y}px`);
