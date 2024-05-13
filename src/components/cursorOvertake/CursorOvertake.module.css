@@ -15,9 +15,18 @@
   pointer-events: none;
   z-index: 2;
 
-  & span {
-    font-size: 0.8rem;
+  & .inner_text {
+    width: 50%;
+    font-size: 0.85rem;
     text-transform: uppercase;
     font-weight: 900;
+  }
+
+  & .subtext {
+    position: absolute;
+    bottom: -40px;
+    font-size: 0.85rem;
+    font-weight: 900;
+    color: var(--white-clr);
   }
 }

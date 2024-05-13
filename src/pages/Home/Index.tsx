@@ -11,7 +11,7 @@ export const Home = () => {
   return (
     <div className={styles['home-wrapper']}>
       <div className={styles['inner_noise_wrapper']}>
-        <CursorOvertake followerText='Watch Reel'>
+        <CursorOvertake followerText='Watch Reel' subtext='BASIC/DEPT® 2010-∞'>
           <Hero />
         </CursorOvertake>
         {/* <FeaturedEngSlider /> */}

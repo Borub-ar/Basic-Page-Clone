@@ -4,10 +4,12 @@ import styles from './CursorOvertake.module.css';
 type CursorOvertakeProps = {
   children: React.ReactNode;
   followerText: string;
+  subtext?: string;
 };
 
-const CursorOvertake = ({ children, followerText }: CursorOvertakeProps) => {
+const CursorOvertake = ({ children, followerText, subtext }: CursorOvertakeProps) => {
   const followerRef = useRef<HTMLDivElement>(null);
+  const wrapperRef = useRef<HTMLDivElement>(null);
 
   const handleMouseOver = (event: React.MouseEvent<HTMLDivElement>) => {
     if (!followerRef.current) return;
@@ -23,10 +25,10 @@ const CursorOvertake = ({ children, followerText }: CursorOvertakeProps) => {
   };
 
   const resetFollowerPosition = () => {
-    if (!followerRef.current) return;
+    if (!followerRef.current || !wrapperRef.current) return;
 
-    const parentWidth = followerRef.current.parentElement?.offsetWidth || 0;
-    const parentHeight = followerRef.current.parentElement?.offsetHeight || 0;
+    const parentWidth = wrapperRef.current.offsetWidth || 0;
+    const parentHeight = wrapperRef.current.offsetHeight || 0;
     const followerWidth = followerRef.current.offsetWidth;
     const followerHeight = followerRef.current.offsetHeight;
 
@@ -36,14 +38,14 @@ const CursorOvertake = ({ children, followerText }: CursorOvertakeProps) => {
     followerRef.current.style.setProperty('--x', `${x}px`);
     followerRef.current.style.setProperty('--y', `${y}px`);
     followerRef.current.style.transition = 'all .5s';
-
     document.body.style.cursor = 'auto';
   };
 
   return (
-    <div onMouseMove={handleMouseOver} onMouseLeave={resetFollowerPosition}>
+    <div ref={wrapperRef} onMouseMove={handleMouseOver} onMouseLeave={resetFollowerPosition}>
       <div ref={followerRef} className={styles.follower}>
-        <span>{followerText}</span>
+        <span className={styles['inner_text']}>{followerText}</span>
+        {subtext && <span className={styles.subtext}>{subtext}</span>}
       </div>
       {children}
     </div>
