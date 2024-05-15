@@ -5,7 +5,7 @@ import VideoSection from './VideoSection';
 import Footer from '../../components/Footer/Footer';
 // import FeaturedEngSlider from './FeaturedEngSlider';
 import Hero from './Hero';
-import CursorOvertake from '../../components/cursorOvertake/CursorOvertake';
+import CursorOvertake from '../../components/CursorOvertake/CursorOvertake';
 
 export const Home = () => {
   return (

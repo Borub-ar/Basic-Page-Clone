@@ -1,6 +1,6 @@
 .follower {
-  --y: 0px;
-  --x: 0px;
+  --y: 0;
+  --x: 0;
   position: absolute;
   top: var(--y);
   left: var(--x);
