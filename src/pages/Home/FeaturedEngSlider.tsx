@@ -1,6 +1,6 @@
-import SliderItem from './SliderItem';
-
 import styles from './FeaturedEngSlider.module.css';
+
+import SliderItem from './SliderItem';
 
 const FeaturedEngSlider = () => {
   return (
