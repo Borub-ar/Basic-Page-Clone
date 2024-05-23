@@ -14,7 +14,7 @@ type NewsTileProps = {
 const NewsTile = ({ tileData }: NewsTileProps) => {
   return (
     <a href='#'>
-      <article>
+      <article className={styles.wrapper}>
         <div className={styles.imgWrapper}>
           <img src={tileData.image} alt={tileData.imageAlt} />
         </div>

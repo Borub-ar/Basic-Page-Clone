@@ -1,0 +1,28 @@
+.wrapper {
+  height: auto;
+  color: var(--main-dark-clr);
+  flex-shrink: 0;
+
+
+  & > img {
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+  }
+
+  & :is(h3, p) {
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  & > h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  & > p {
+    max-width: 150px;
+    font-size: 0.7rem;
+  }
+}
