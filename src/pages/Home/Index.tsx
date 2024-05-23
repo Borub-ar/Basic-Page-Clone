@@ -6,6 +6,7 @@ import Footer from '../../components/Footer/Footer';
 // import FeaturedEngSlider from './FeaturedEngSlider';
 import Hero from './Hero';
 import CursorOvertake from '../../components/CursorOvertake/CursorOvertake';
+import SponsorsSection from './SponsorsSection';
 
 export const Home = () => {
   return (
@@ -14,6 +15,7 @@ export const Home = () => {
         <CursorOvertake followerText='Watch Reel' subtext='BASIC/DEPT® 2010-∞'>
           <Hero />
         </CursorOvertake>
+        <SponsorsSection />
         {/* <FeaturedEngSlider /> */}
         <VideoSection />
         <FeaturedNews />

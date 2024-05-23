@@ -38,7 +38,7 @@ function App() {
   return (
     <PortalContext.Provider value={contextValues}>
       <main ref={containerRef}>
-        <StartingOverlay showOverlay={showOverlay} />
+        {/* <StartingOverlay showOverlay={showOverlay} /> */}
         <Home />
       </main>
     </PortalContext.Provider>

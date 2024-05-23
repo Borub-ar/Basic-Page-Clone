@@ -1,0 +1,16 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-block: 5rem;
+
+  & p {
+    font-size: 0.6rem;
+    font-weight: 900;
+    margin-top: 3.5rem;
+    text-transform: uppercase;
+    max-width: 20rem;
+    text-align: center;
+  }
+}
