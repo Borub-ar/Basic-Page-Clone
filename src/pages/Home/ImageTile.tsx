@@ -5,15 +5,19 @@ type ImageTileProps = {
   imageAlt: string;
   title: string;
   description: string;
-  isVideo?: boolean;
   videoSrc?: string;
 };
 
-const ImageTile = ({ imageSrc, imageAlt, title, description, isVideo, videoSrc }: ImageTileProps) => {
+const ImageTile = ({ imageSrc, imageAlt, title, description, videoSrc }: ImageTileProps) => {
   return (
     <article className={styles.wrapper}>
       <div>
-        <img src={imageSrc} alt={imageAlt} />
+        {!videoSrc && <img src={imageSrc} alt={imageAlt} />}
+        {videoSrc && (
+          <video preload='metadata' autoPlay loop muted>
+            <source src={videoSrc} type='video/mp4' />
+          </video>
+        )}
       </div>
       <h3>{title}</h3>
       <p>{description}</p>

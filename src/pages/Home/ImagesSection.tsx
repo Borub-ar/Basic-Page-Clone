@@ -9,10 +9,11 @@ const ImagesSection = () => {
   const tiles = content.map(tile => (
     <ImageTile
       key={tile.id}
-      imageSrc={tile.image}
-      imageAlt={tile.imageAlt}
+      imageSrc={tile.image || ''}
+      imageAlt={tile.imageAlt || ''}
       title={tile.title}
       description={tile.description}
+      videoSrc={tile.videoSrc}
     />
   ));
 

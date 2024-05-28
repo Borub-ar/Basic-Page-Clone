@@ -4,7 +4,7 @@
   flex-shrink: 0;
   cursor: pointer;
 
-  &:hover > div > img {
+  &:hover > div :is(img, video) {
     scale: 1.1;
   }
 
@@ -24,7 +24,7 @@
     }
   }
 
-  & > div > img {
+  & > div :is(img, video) {
     object-fit: cover;
     width: 100%;
     max-width: 100%;
