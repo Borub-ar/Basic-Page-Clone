@@ -10,7 +10,9 @@ type ImageTileProps = {
 const ImageTile = ({ imageSrc, imageAlt, title, description }: ImageTileProps) => {
   return (
     <article className={styles.wrapper}>
-      <img src={imageSrc} alt={imageAlt} />
+      <div>
+        <img src={imageSrc} alt={imageAlt} />
+      </div>
       <h3>{title}</h3>
       <p>{description}</p>
     </article>

@@ -16,7 +16,7 @@ const NewsTile = ({ tileData }: NewsTileProps) => {
     <a href='#'>
       <article className={styles.wrapper}>
         <div className={styles.imgWrapper}>
-          <img src={tileData.image} alt={tileData.imageAlt} />
+          <img className={styles.image} src={tileData.image} alt={tileData.imageAlt} />
         </div>
 
         <div className={styles.textPanel}>
