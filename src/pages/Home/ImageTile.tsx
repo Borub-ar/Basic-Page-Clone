@@ -5,9 +5,11 @@ type ImageTileProps = {
   imageAlt: string;
   title: string;
   description: string;
+  isVideo?: boolean;
+  videoSrc?: string;
 };
 
-const ImageTile = ({ imageSrc, imageAlt, title, description }: ImageTileProps) => {
+const ImageTile = ({ imageSrc, imageAlt, title, description, isVideo, videoSrc }: ImageTileProps) => {
   return (
     <article className={styles.wrapper}>
       <div>

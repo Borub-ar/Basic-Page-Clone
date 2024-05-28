@@ -1,0 +1,28 @@
+{
+  "content": [
+    {
+      "title": "Patagonia",
+      "description": "AN ECOMMERCE EXPERIENCE DRIVEN BY PATAGONIA’S BRAND MISSION",
+      "image": "https://cdn.sanity.io/images/8nn8fua5/production/931c4de4f3cbbeb30a5b65677a174f2980e44805-720x900.jpg?w=1024&fm=webp&q=65",
+      "imageAlt": "",
+      "link": "#",
+      "id": "234432fdSfew4"
+    },
+    {
+      "title": "Wilson",
+      "description": "A CENTURY-OLD SPORTS BRAND FINDING ITS PLACE IN CULTURE",
+      "image": "https://cdn.sanity.io/images/8nn8fua5/production/f1931ee572cd014ca5c3b5fe7e6054cfc0583624-720x900.jpg?w=1024&fm=webp&q=65",
+      "imageAlt": "",
+      "link": "#",
+      "id": "kkjhretfdsdFDS"
+    },
+    {
+      "title": "Google store",
+      "description": "AN ECOMMERCE EXPERIENCE HELPING GOOGLE BRING ITS HARDWARE TO PEOPLE ACROSS THE GLOBE",
+      "isVideo": true,
+      "videoSrc": "https://cdn.sanity.io/files/8nn8fua5/production/9dc5a490bd877e8685f2089209db192188dd21e7.mp4",
+      "link": "#",
+      "id": "876123fdgfhut"
+    }
+  ]
+}
